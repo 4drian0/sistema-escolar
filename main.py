@@ -1,9 +1,14 @@
 """Demonstração dos três tipos de relacionamento do micro cenário escolar."""
+import sys
 from datetime import date
 
 from sistema_escolar.aluno import Aluno
 from sistema_escolar.escola import Escola
 from sistema_escolar.professor import Professor
+
+# Garante UTF-8 no terminal (evita "�" no Windows / Code Runner)
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 
 def titulo(texto: str) -> None:
